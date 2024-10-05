@@ -17,7 +17,7 @@
 1. List(or research) key metrics for Tuberculosis.
 2. Review available data.
 3. Identify the type of analysis that can be done and list the questions that can be answered.
-4. Clean the data -
+4. Clean the data 
 5. Analyze the data and answer the question.
 6.Visualize the analysis
 
