@@ -1,9 +1,9 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Automated cleaning script
 # This file reads in raw data filese, performs cleaning steps, and writes out
 # clean data files that can be used for analysis.
+
 
 # Cleaning steps:Tb disease symptoms.csv
 # read data from a raw file
@@ -80,7 +80,7 @@ def main():
 #make a new file with cleaning data 
 
  # read data from a raw file
-'''tb_csv = pd.read_csv("data/raw/3- tuberculosis-case-detection-rate.csv")
+tb_csv = pd.read_csv("data/raw/3- tuberculosis-case-detection-rate.csv")
 #print(tb_csv.head(10))
 
 #rename the columns name
@@ -113,6 +113,14 @@ print(tb_csv.shape)
 # make a new file with cleaning data
 tb_csv.to_csv("data/clean/tb_case_detection_rate.csv",index=False)
 
+# add a chart(Case Detection rate)
+tbcsv1 = tb_csv.head(8)
+tbcsv1.plot.bar(x='code', y='case_detection_rate', rot = 0)
+plt.title('Case Detection')
+plt.xlabel('code')
+plt.ylabel('case_detection_rate')
+plt.show()
+
 
 
 
@@ -122,7 +130,7 @@ tb_csv.to_csv("data/clean/tb_case_detection_rate.csv",index=False)
 #rename the columns name
 #remove unneeded columns
 #delete rows with null values
-#make a new file with cleaning data'''
+#make a new file with cleaning data
 
 #Read data from the file
 tb_treat= pd.read_csv("data/raw/4- tuberculosis-treatment-success-rate-by-type.csv")
@@ -130,7 +138,7 @@ tb_treat= pd.read_csv("data/raw/4- tuberculosis-treatment-success-rate-by-type.c
 
 # Rename  Columns
 #print(tb_treat.columns)
-tb_treat.rename(columns={"Entity":"entity","Code":"code","Year":"year"
+'''tb_treat.rename(columns={"Entity":"entity","Code":"code","Year":"year"
                          ,"Indicator:Treatment success rate: new TB cases":
                          "treat_success_rate:new_tb_cases",
                          "Indicator:Treatment success rate for patients treated for MDR-TB (%)":
@@ -149,18 +157,19 @@ tb_treat.drop(tb_treat.loc[tb_treat['treat_success_rate:new_tb_cases'] <= 40].in
 
 #delete rows with null value
 #tb_treat["treat_success_rate:new_tb_cases"].isnull().sum()
-#tb_treat =tb_treat.dropna()'''
+#tb_treat =tb_treat.dropna()
 
-# add a chart
-treat1 = tb_treat.head(20)
+#make a new file with cleaning data
+#tb_treat.to_csv("data/clean/treat.csv",index=False)
+
+# add a chart(treatment success rate)
+treat1 = tb_treat.head(10)
 treat1.plot.bar(x='year', y='treat_success_rate:new_tb_cases', rot = 0)
 plt.title('Success rate per year')
 plt.xlabel('year')
 plt.ylabel('success rate')
-plt.show()
+plt.show()'''
 
-
-#make a new file with cleaning data
-#tb_treat.to_csv("data/clean/treat.csv",index=False)
 if __name__ == "__main__":
     main()
+
