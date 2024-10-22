@@ -1,4 +1,4 @@
-Tuberculosis: https://cdn1.byjus.com/wp-content/uploads/2019/04/Tuberculosis.png
+![Tuberculosis] (https://github.com/hiasha1/Tuberculosis---Project/blob/fae18a0dbd3403f8c48c094ac5b13db80510d6e6/tuberculosis.jpg)
 # Introduction:
     My objective is to create a Capstone project that will give awareness to people about Tuberculosis. 
 
