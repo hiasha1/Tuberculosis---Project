@@ -1,5 +1,5 @@
 
-![TUBERCULOSIS](images/tuberculosis.jpg)
+![TUBERCULOSIS](Images/tuberculosis.jpg)
 # Introduction:
     My objective is to create a Capstone project that will give awareness to people about Tuberculosis. 
 
