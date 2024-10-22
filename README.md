@@ -1,4 +1,4 @@
-! [TUBERCULOSIS](tuberculosis.jpg)
+Tuberculosis: https://cdn1.byjus.com/wp-content/uploads/2019/04/Tuberculosis.png
 # Introduction:
     My objective is to create a Capstone project that will give awareness to people about Tuberculosis. 
 
