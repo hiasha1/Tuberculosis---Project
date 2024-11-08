@@ -1,6 +1,6 @@
 
 ![TUBERCULOSIS](Images/tuberculosis.jpg)
-
+![Tuberculosis](https://www.cdc.gov/think-test-treat-tb/images/graphics/Think_Test_Treat_TB_1080x1080.gif)
 
 # Introduction:
     My objective is to create a Capstone project that will give awareness to people about Tuberculosis. 
