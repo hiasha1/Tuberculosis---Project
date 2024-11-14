@@ -4,19 +4,18 @@ import matplotlib.pyplot as plt
 # This file reads in raw data filese, performs cleaning steps, and writes out
 # clean data files that can be used for analysis.
 
-
 # Cleaning steps:Tb disease symptoms.csv
 # read data from a raw file
 # rename the columns
 # remove unneeded columns
 # make a new file with cleaning data
 def main():
-        '''tb_sym = pd.read_csv("data/raw/Tb disease symptoms.csv")
+        tb_sym = pd.read_csv("data/raw/Tb disease symptoms.csv")
         #tb_sym.info()
-        print(tb_sym.head(10))
+        #print(tb_sym.head(10))
 
 #rename the columns
- tb_sym.rename(columns = {'night sweats ':'night_sweats'
+        tb_sym.rename(columns = {'night sweats ':'night_sweats'
                          ,'fever for two weeks':'fever',
                          'back pain in certain parts ':'back_pain'
                          ,'weight loss ':'weight_loss',
@@ -35,13 +34,13 @@ def main():
    # print(tb_sym.columns)
 
 # remove unneeded columns
-    tb_sym=tb_sym[["id","gender","fever",
+        tb_sym=tb_sym[["id","gender","fever",
                  "coughing_blood","sputum_mixed_with_blood",
                  "night_sweats","chest_pain","back_pain",
                  "shortness_of_breath","weight_loss",
                  "lumps_around_armpits_and_neck","body_feels_tired",
                  "swollen_lymph_nodes","loss_of_appetite"]]
-    print(tb_sym.columns)
+        #print(tb_sym.columns)
 
 # remove the column with less common symptoms 
                
@@ -55,17 +54,17 @@ def main():
     #0  - 521    1 - 480
 
 
-    tb_sym=tb_sym[["id","gender","fever",
+        tb_sym=tb_sym[["id","gender","fever",
                  "coughing_blood","sputum_mixed_with_blood",
                  "night_sweats","back_pain",
                  "shortness_of_breath","weight_loss",
                  "lumps_around_armpits_and_neck",
                  "swollen_lymph_nodes","loss_of_appetite"]]
-    print(tb_sym.columns)
+        #print(tb_sym.columns)
 
 
 # make a new file with cleaning data
-    tb_sym.to_csv("data/clean/tb_symptoms.csv",index=False)'''
+        tb_sym.to_csv("data/clean/tb_symptoms.csv",index=False)
 
 
 
@@ -108,18 +107,19 @@ tb_csv.drop(tb_csv.loc[tb_csv['entity'] == 'Tokelau'].index,inplace=True)
 
 #remove the rows with less than 40 detection rate
 tb_csv.drop(tb_csv.loc[tb_csv['case_detection_rate'] <= 40].index,inplace=True)
-print(tb_csv.shape)
+#print(tb_csv.shape)
 
 # make a new file with cleaning data
 tb_csv.to_csv("data/clean/tb_case_detection_rate.csv",index=False)
 
+
 # add a chart(Case Detection rate)
-tbcsv1 = tb_csv.head(8)
+'''tbcsv1 = tb_csv.head(8)
 tbcsv1.plot.bar(x='code', y='case_detection_rate', rot = 0)
 plt.title('Case Detection')
 plt.xlabel('code')
 plt.ylabel('case_detection_rate')
-plt.show()
+plt.show()'''
 
 
 
@@ -138,7 +138,7 @@ tb_treat= pd.read_csv("data/raw/4- tuberculosis-treatment-success-rate-by-type.c
 
 # Rename  Columns
 #print(tb_treat.columns)
-'''tb_treat.rename(columns={"Entity":"entity","Code":"code","Year":"year"
+tb_treat.rename(columns={"Entity":"entity","Code":"code","Year":"year"
                          ,"Indicator:Treatment success rate: new TB cases":
                          "treat_success_rate:new_tb_cases",
                          "Indicator:Treatment success rate for patients treated for MDR-TB (%)":
@@ -162,8 +162,13 @@ tb_treat.drop(tb_treat.loc[tb_treat['treat_success_rate:new_tb_cases'] <= 40].in
 #make a new file with cleaning data
 #tb_treat.to_csv("data/clean/treat.csv",index=False)
 
+# Join two tables by using inner joins
+combined = pd.merge(tb_treat,tb_csv, how='inner', on =['entity','code','year'])
+#print(combined)
+combined.to_csv("data/clean/combine.csv",index=False)
+
 # add a chart(treatment success rate)
-treat1 = tb_treat.head(10)
+'''treat1 = tb_treat.head(10)
 treat1.plot.bar(x='year', y='treat_success_rate:new_tb_cases', rot = 0)
 plt.title('Success rate per year')
 plt.xlabel('year')
@@ -172,4 +177,6 @@ plt.show()'''
 
 if __name__ == "__main__":
     main()
+
+
 
