@@ -2,7 +2,7 @@
 ![TUBERCULOSIS](Images/tuberculosis.jpg)
 ![Tuberculosis](https://www.cdc.gov/think-test-treat-tb/images/graphics/Think_Test_Treat_TB_1080x1080.gif)
 
-![Tableau](https://public.tableau.com/app/profile/asha.sharma2844/viz/TuberculosisData_17336887672400/Sheet2)
+[Tableau](https://public.tableau.com/app/profile/asha.sharma2844/viz/TuberculosisData_17336887672400/Sheet2)
 
 # Introduction:
     My objective is to create a Capstone project that will give awareness to people about Tuberculosis. 
@@ -23,7 +23,8 @@
 
 # Technical Insight:
     - Requirements.txt- Conatains data to use virtual environments.
-    - matplotlib - Graphical representation of data.
+    - Matplotlib - Graphical representation of data.
+    - Tableau - graphical presentation of combined files.
     - README.md: general information about the project.
     - Data/raw : raw data files.
     - Data/clean: cleaned data files.
