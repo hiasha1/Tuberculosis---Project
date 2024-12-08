@@ -2,6 +2,8 @@
 ![TUBERCULOSIS](Images/tuberculosis.jpg)
 ![Tuberculosis](https://www.cdc.gov/think-test-treat-tb/images/graphics/Think_Test_Treat_TB_1080x1080.gif)
 
+![Tableau](https://public.tableau.com/app/profile/asha.sharma2844/viz/TuberculosisData_17336887672400/Sheet2)
+
 # Introduction:
     My objective is to create a Capstone project that will give awareness to people about Tuberculosis. 
 
@@ -54,3 +56,19 @@
 1. This README file provides information about the project and how to use the code.
 2. `data/README.md` provides data dictionary for the data used in the project.
 3. `src/01_discover.ipynb` is a jupyter notebook using pandas to understand the raw data files.
+
+# Running the Program:
+
+The following is a guide to running the project files locally:
+
+1. Fork the repository repo link.
+
+2. Clone the repository to your Github account.
+
+3. Access the repository from your command line or preferred CMD software.
+
+4. Install a virtual environment. The command in Gitbash is python -m venv venv.
+
+5. Activate the virtual environment. The command in Gitbash is source venv/scripts/activate.
+
+6. Install the requirements.txt file to install necessary packages by running pip install requirements.txt.
